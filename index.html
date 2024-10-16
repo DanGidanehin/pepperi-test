@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="assets/favicon.png" type="image/png">
+  <!-- Styles import -->
+  <link rel="stylesheet" href="css/styles.css">
+  <title>Test</title>
+</head>
+<!-- Body -->
+<body>
+  <!-- Header Section -->
+  <div class="header">
+    <img src="assets/favicon.png" alt="Logo" class="logo">
+    <h1 class="mainHeading">Test</h1> 
+  </div>
+  <!-- Input Section -->
+  <div class="inputSectionContainer">
+    <label for="nameValueInput">Name/Value Pair Input</label>
+    <div class="inputFieldContainer">
+      <input type="text" id="nameValueInput" placeholder="Enter Name=Value pair">
+      <button id="addButton">Add</button>
+    </div>
+  </div>  
+  <!-- List Section -->
+  <div class="listSectionContainer">
+    <label for="nameValueList">Name/Value Pair List</label>
+    <ul id="nameValueList"></ul>
+    <div class="listButtonsContainer">
+      <button class="listButton" id="sortByNameButton">Sort by Name</button>
+      <button class="listButton" id="sortByValueButton">Sort by Value</button>
+      <button class="listButton" id="deleteItemsButton">Delete</button>
+      <button class="listButton" id="showXMLButton">Show XML</button>
+    </div>
+  </div>
+  <!-- JavaScript import -->
+  <script type="module" src="js/script.js"></script>
+</body>
+</html>

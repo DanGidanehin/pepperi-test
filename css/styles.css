@@ -1,0 +1,212 @@
+/* Body styling */
+body {
+  font-family: Arial, sans-serif;
+	background-color: #fbfefb;
+	padding: 1rem 2rem;
+	color: #08566a;
+	font-size: clamp(1rem, 0.8333rem + 0.5333vw, 1.5rem);
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  margin-left: 1rem;
+  font-weight: bold;
+  font-size: clamp(0.8rem, 0.6415rem + 0.6761vw, 1.25rem);
+}
+
+button {
+  background-color: #1a99ad;
+  color: #fbfefb;
+  border: none;
+  padding: 12px 17px;
+  border-radius: 1.5rem;
+  cursor: pointer;
+  font-size: clamp(1rem, 0.8239rem + 0.7512vw, 1.5rem);
+  transition: background-color 0.1s, transform 0.1s;
+}
+
+button:hover {
+  background-color: #88c5d7;
+  transform: scale(1.05);
+}
+
+/* Header section styling */
+.header {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	margin-bottom: 1rem;
+}
+
+.logo {
+	display: block;
+	margin: 0 1rem;
+	width: clamp(3.5rem, 2.6667rem + 2.6667vw, 6rem);
+	aspect-ratio: 1;
+}
+
+.mainHeading{
+	color: #1a99ad;
+	margin: 0;
+	font-weight: 400;
+	font-size: clamp(2.5rem, 1.6667rem + 2.6667vw, 5rem);
+}
+
+/* Input section styling */
+.inputSectionContainer {
+	flex: 1;
+	margin-bottom: 1rem;
+	background-color: #d9ebf1;
+	border: 2px solid #1a99ad;
+	border-radius: 3rem;
+	padding: 1.5rem 1.7rem;
+}
+
+.inputFieldContainer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+input[type="text"] {
+	flex: 1;
+	padding: 10px 15px;
+	border: 2px solid #1a99ad;
+	border-radius: 1.5rem;
+	margin-right: 0.5rem;
+	font-size: clamp(1rem, 0.8239rem + 0.7512vw, 1.5rem);
+	transition: border-color 0.3s, box-shadow 0.3s;
+	color: #08566a;
+  caret-color: #08566a;
+}
+
+input[type="text"]::placeholder {
+	color: #88c5d7;
+	font-style: italic;
+	opacity: 0.8;
+	transition: opacity 0.3s;
+}
+
+input[type="text"]:focus::placeholder {
+	opacity: 0;
+}
+
+input[type="text"]:focus {
+	border-color: #88c5d7;
+	box-shadow: 0 0 5px rgba(136, 197, 215, 0.75);
+	outline: none;
+}
+
+#addButton {
+	font-size: clamp(1rem, 0.8239rem + 0.7512vw, 1.5rem);
+}
+
+/* List section styling */
+.listSectionContainer {
+	background-color: #d9ebf1;
+	border: 2px solid #1a99ad;
+	border-radius: 3rem;
+	padding: 1.5rem 1.7rem;
+	margin-bottom: 1rem;
+}
+
+#nameValueList {
+	list-style-type: none;
+	background-color: #fbfefb;
+	padding: 10px 15px;
+	border: 2px solid #1a99ad;
+	border-radius: 1.5rem;
+	min-height: 10rem;
+	max-height: 20rem;
+	overflow-y: auto;
+	scrollbar-width: none;
+	-ms-overflow-style: none;
+}
+
+#nameValueList::-webkit-scrollbar {
+	width: 0;
+	height: 0;
+}
+
+.list-item {
+	padding: 10px 15px;
+	background-color: #d9ebf1;
+	color: #08566a;
+	border: 2px solid #1a99ad;
+	margin: 0.3rem 0;
+  cursor: pointer;
+	border-radius: 0.6rem;
+	transition: background-color 0.3s;
+	font-size: clamp(1rem, 0.8239rem + 0.7512vw, 1.5rem);
+}
+
+.list-item:hover {
+	background-color: #1a99ad76;
+	color: #fbfefb;
+}
+
+.list-item.selected {
+	background-color: #88c5d7;
+	color: #08566a;
+}
+
+.list-item.selected:hover {
+	background-color: #1a99ad9d;
+	color: #fbfefb;
+}
+
+.listButtonsContainer {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	gap: 1rem;
+	flex-wrap: wrap;
+}
+
+.listButtonsContainer button {
+	font-size: clamp(1rem, 0.8239rem + 0.7512vw, 1.5rem);
+}
+
+/* Responsive Styles for smaller screens */
+@media (max-width: 685px) {
+
+  .header {
+		justify-content: center;
+	}
+
+	.listButtonsContainer {
+		justify-content: center;
+		gap: 1rem;
+		display: flex;
+		flex-direction: column;
+	}
+}
+
+@media (max-width: 550px) {
+
+	.inputSectionContainer {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.inputFieldContainer {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+	}
+
+	input[type="text"] {
+		flex-grow: 1;
+		width: 100%;
+		margin: 0 0 1rem;
+		box-sizing: border-box;
+	}
+
+	#addButton {
+		flex-grow: 1;
+		width: 100%;
+		padding: 12px 17px;
+		box-sizing: border-box;
+	}
+}
